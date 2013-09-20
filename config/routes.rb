@@ -1,5 +1,7 @@
 MiniUber::Application.routes.draw do
   devise_for :users
+  resources :admins
+  resources :members
   root :to => "home#index"
 
   get "home/index"

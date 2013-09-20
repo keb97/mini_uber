@@ -36,6 +36,7 @@ group :test do
   gem 'email_spec'
 end
 
+gem 'simple_form'
 gem 'devise'
 
 group :doc do

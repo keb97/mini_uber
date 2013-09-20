@@ -1,0 +1,14 @@
+<h2>Sign up for new admins!</h2>
+<%= simple_form_for @admin do |f| %>
+
+
+  <%= f.fields_for :user do |u| %>
+    <%= u.input :email %>
+    <%= u.input :password %>
+    <%= u.input :password_confirmation %>
+  <%end %>
+
+  <%= f.input :name %>
+
+  <%= f.button :submit, "Sign up" %>
+<% end %>

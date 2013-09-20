@@ -1,0 +1,15 @@
+<h2>Sign up for new members!</h2>
+<%= simple_form_for @member do |f| %>
+
+
+  <%= f.fields_for :user do |u| %>
+    <%= u.input :email %>
+    <%= u.input :password %>
+    <%= u.input :password_confirmation %>
+  <%end %>
+
+  <%= f.input :name %>
+  <%= f.input :city %>
+
+  <%= f.button :submit, "Sign up" %>
+<% end %>
