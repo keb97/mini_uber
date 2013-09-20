@@ -32,6 +32,8 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl'
+  gem 'email_spec'
 end
 
 gem 'devise'
