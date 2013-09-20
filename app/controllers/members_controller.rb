@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+
+
   def new
     @member = Member.new
     @member.build_user
@@ -10,7 +12,8 @@ class MembersController < ApplicationController
     @user.profile = @member
     @member.save
     @user.save
-    render action: "index" flash[:notice] = "New member signed up!"
+    flash[:notice] = "New member signed up!"
+    redirect_to "/"
   end
 
   private
