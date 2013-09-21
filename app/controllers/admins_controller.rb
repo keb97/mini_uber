@@ -7,15 +7,15 @@ class AdminsController < ApplicationController
   def create
     @user = User.new(user_params)
     @admin = Admin.new(admin_params)
-    @user.profileable = @admin
-    @user.save
+    @user.profile = @admin
     @admin.save
-    redirect_to "index#home", flash[:notice] = "New admin signed up!"
+    redirect_to '/'
+    flash[:notice] = "New admin signed up!"
   end
 
   private
     def user_params
-      params.require(:user).permit!
+      admin_params[:user_attributes]
     end
     def admin_params
       params.require(:admin).permit!

@@ -11,7 +11,6 @@ class MembersController < ApplicationController
     @member = Member.new(member_params)
     @user.profile = @member
     @member.save
-    @user.save
     flash[:notice] = "New member signed up!"
     redirect_to "/"
   end

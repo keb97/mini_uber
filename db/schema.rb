@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130920203813) do
 
-  create_table "admin", force: true do |t|
+  create_table "admins", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
